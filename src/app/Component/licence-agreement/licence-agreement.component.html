@@ -1,0 +1,27 @@
+<p>
+  licence-agreement works!
+</p>
+
+<div class="container">
+  <h2>Table Head Colors</h2>
+  <p>getting a json data using services</p>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>User Id</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fake of fakedata">
+        <td>{{fake.userId}}</td>
+        <td>{{fake.id}}</td>
+        <td>{{fake.title}}</td>
+        <td>{{fake.body}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

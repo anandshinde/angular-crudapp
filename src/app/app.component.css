@@ -1,0 +1,13 @@
+h4{
+text-align: center;
+/* border: 1px solid lightblue; */
+height: 35px;
+padding-top: 5px;
+}
+.image{
+height: 40%;
+width: 100%;
+}
+.nav-item:hover :active{
+    color:rgb(34, 167, 167);
+}

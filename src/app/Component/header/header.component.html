@@ -1,0 +1,126 @@
+<div class="container">
+    <div class="container-fluid">
+        <div class="container card">
+            <div class="card-header">
+                <h4>Combo App</h4>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="./assets/image/ma.jpg">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Registration</h4>
+                        </div>
+                        <div class="card-body">
+                            <form [formGroup]=userForm action="" ngSubmit="sendData(userForm.value)">
+                                <div class="form-group">
+                                    <label class="col-md-3">First Name</label>
+                                    <label class="col-md-9">
+                                        <input type="text" formControlName="fname" #name class="form-control"
+                                            placeholder="Enter your first name">
+                                        <div *ngIf="userForm.controls.fname.touched">
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['fname'].hasError('required')"> Please Enter
+                                                First name</div>
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['fname'].hasError('minlength')"> Please Enter
+                                                minimum length</div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-3">Last Name</label>
+                                    <label class="col-md-9">
+                                        <input type="text" formControlName="lname" #name class="form-control"
+                                            placeholder="Enter your Last name">
+                                        <div *ngIf="userForm.controls.lname.touched">
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['lname'].hasError('required')"> Please Enter
+                                                Last name</div>
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['lname'].hasError('minlength')"> Please Enter
+                                                minimum length</div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-3">Place</label>
+                                    <label class="col-md-9"> <select formControlName="place" #name class="form-control">
+                                            <div *ngIf="userForm.controls.place.touched">
+                                                <div class="alert alert-danger"
+                                                    *ngIf="userForm.controls['place'].hasError('required')"> Please
+                                                    Enter Last name</div>
+                                                <div class="alert alert-danger"
+                                                    *ngIf="userForm.controls['place'].hasError('minlength')"> Please
+                                                    Enter minimum length</div>
+                                            </div>
+                                            <option selected>Choose...</option>
+                                            <option>Bangalore</option>
+                                            <option>Pune</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3">Email</label>
+                                    <label class="col-md-9"><input type="email" formControlName="email" #name
+                                            class="form-control" placeholder="Enter your Email">
+                                        <div *ngIf="userForm.controls.email.touched">
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['email'].hasError('required')"> Please Enter
+                                                Email</div>
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['email'].hasError('minlength')"> Please Enter
+                                                minimum length</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3">Contact No.</label>
+                                    <label class="col-md-9"><input type="number" formControlName="contact" #name
+                                            class="form-control" placeholder="Enter your Contact No.">
+                                        <div *ngIf="userForm.controls.contact.touched">
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['contact'].hasError('required')">Please Enter
+                                                Contact No.</div>
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['contact'].hasError('minlength')">Please Enter
+                                                minimum length</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3">Browse file</label>
+                                    <label class="col-md-9"><input type="file" formControlName="browse" #name
+                                            class="form-control">
+                                        <div *ngIf="userForm.controls.browse.touched">
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['browse'].hasError('required')"> Please Browse
+                                                file</div>
+                                            <div class="alert alert-danger"
+                                                *ngIf="userForm.controls['browse'].hasError('minlength')"> Please Enter
+                                                minimum length</div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary mr-2" (click)='sendData(userForm.value)'
+                                        type="submit">Submit</button>
+                                    <button type="button" class="btn btn-success mr-2" type="submit">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <router-outlet></router-outlet>

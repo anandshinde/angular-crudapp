@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a routerLink='Header' class="navbar-brand">Header</a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNavbar" data-toggle="collapse">
+        <div class="navbar-nav">
+          <a routerLink="Home" class="nav-item  nav-link">Home</a>
+          <a routerLink='Contact' class="nav-item  nav-link">Contact Us</a>
+          <a class="nav-item  nav-link">Profile</a>
+          <a routerLink='Licence' class="nav-item  nav-link">Licence-agreement</a>
+          <a routerLink="Messages" class="nav-item  nav-link">Messages</a>
+          <a routerLink="feature" class="nav-item  nav-link">Features</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <a routerLink="Messages" class=" nav-item nav-link">Login</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <div class="container-fluid">
+    <div class="card col-md-12">
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

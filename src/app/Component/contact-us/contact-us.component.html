@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="container-fluid">
+    <div class="row">
+    <div class="card col-md-6">
+      <div class="card-header">
+        <h4>Contact Us</h4>
+      </div>
+      <div class="card-body">
+        <form action="" [formGroup]=userForm (ngSubmit)="fun(userForm.value)">
+          <div class="form-group">
+            <label class="col-md-4">Name</label>
+            <label class="col-md-8">
+              <input type="text" formControlName="name" #name class="form-control" placeholder="Enter your Contact No.">
+              <div *ngIf="userForm.controls.name.touched">
+                <div class="alert alert-danger" *ngIf="userForm.controls['name'].hasError('required')"> Please Enter name</div>
+                <div class="alert alert-danger" *ngIf="userForm.controls['name'].hasError('minlength')"> Please Enter minimum length</div>
+              </div>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4">Contact No.</label>
+            <label class="col-md-8">
+              <input type="number" formControlName="phone" class="form-control" placeholder="Enter your Contact No.">
+              <div *ngIf="userForm.controls.phone.dirty">
+                <div class="alert alert-danger" *ngIf="userForm.controls['phone'].hasError('required')"> Please Enter Phone number</div>
+                <div class="alert alert-danger" *ngIf="userForm.controls['phone'].hasError('minlength')">Please enter minimum legth</div>
+              </div>
+            </label>
+          </div>
+
+          <label class="col-md-6 bttn">
+              <button type="reset" class="btn btn-primary mr-2" type="submit">Cancel</button>
+              <button type="submit" class="btn btn-success mr-2" type="submit">Send</button>
+          </label>
+
+        </form>
+
+      </div>
+    </div>
+      <div class="card col-md-6">
+        <div class="card-header">
+          <h3>Check Your Details</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
